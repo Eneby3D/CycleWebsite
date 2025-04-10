@@ -1,3 +1,97 @@
+/* General Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    background: #718AA0;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Title Section */
+.title {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+/* Navigation Styling */
+nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #A3BD92;
+}
+
+nav a {
+    width: 20%;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Content Section */
+section#content {
+    padding-top: 25px;
+    display: grid;
+    gap: 25px;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto; /* Ensures flexible height for content */
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Flag Styling */
+div.flag {
+    position: absolute;
+    left: 0px;
+    background: #edd860;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 50px;
+    margin-top: -25px;
+    text-decoration: none;
+}
+
+div.flag.right {
+    left: unset;
+    right: 0px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* For smaller screens, adjust grid layout */
+    section#content {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    nav a {
+        width: auto; /* Adjust nav link width on smaller screens */
+        font-size: 16px;
+    }
+
+    /* Adjust title image and container height on smaller screens */
+    .title img {
+        height: 150px;
+    }
+}
+
 .page-wrapper {
     flex: 1;
     display: flex;
